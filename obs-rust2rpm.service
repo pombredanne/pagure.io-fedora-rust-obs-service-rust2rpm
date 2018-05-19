@@ -1,0 +1,19 @@
+<service name="rust2rpm">
+  <summary>Generate RPM packaging for Rust crates</summary>
+  <description>This service is simply runs rust2rpm for a given Rust crate on crates.io to generate RPM packaging to build packages for crates.</description>
+  <parameter name="name">
+    <description>The name of the crate.</description>
+    <required/>
+  </parameter>
+  <parameter name="version">
+    <description>The version of the crate.</description>
+  </parameter>
+  <parameter name="type">
+    <description>Target distribution type for packaging, defaults to 'opensuse' if not set.</description>
+    <allowedvalue>plain</allowedvalue>
+    <allowedvalue>fedora</allowedvalue>
+    <allowedvalue>mageia</allowedvalue>
+    <allowedvalue>opensuse</allowedvalue>
+  </parameter>
+</service>
+
